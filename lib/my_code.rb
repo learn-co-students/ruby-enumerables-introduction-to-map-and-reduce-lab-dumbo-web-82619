@@ -46,16 +46,36 @@ def reduce_to_total(source_array, starting_point=0)
   return total
 end
   def reduce_to_all_true(source_array)
-  i = 0
-  line = source_array
-  while i < line.length do
-      if line[i] ==false
-      return false
+    i = 0
+    while i < source_array.length do
+      if source_array[i] ==false
+        return false
+      end
+      source_array[i] == true
+      i+=1
     end
-    line[i] == true
+    return true
   end
-  return true
-end
+  def reduce_to_any_true(source_array)
+     i = 0 
+     while i < source_array.length do
+       if source_array[i] == truel
+         return true
+      end
+      source_array[i] == false
+      i+=1 
+    end
+    return false 
+  end
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
